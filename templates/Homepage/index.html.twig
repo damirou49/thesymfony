@@ -1,0 +1,257 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Page d'accueil
+{% endblock %}
+
+{% block body %}
+<div id="page_wrapper">
+   <!--Search section  -->
+   <div style="height: 500px; display: flex; align-items: center; background: url(/images/santorinipano.jpg);    background-size: cover;">
+   <div class="container search-container">
+      <div class="row">
+         <div class="col-md-12 col-sm-12 ">
+            <div>
+               <!--floating icon-->
+               <div class="hg-iconbox--center-icon txt-center hg-iconbox--floating">
+                  <div class="hg-iconbox__icon-wrapper">
+                     <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+               </div>
+               <!--search form-->
+               <div class="form-container" style="padding: 15px 35px 15px;width: 350px; margin-top: 150px;">
+                  <form action="{{ path("app_search") }}" style="z-index:9998;">
+                     <div>
+                        <!--Coloana adults  -->
+                        <div class="flex-col">
+                           <div class="hg-form-component-input form-group col-md-6">
+                              <label>Aller</label>
+                              <div class='input-group'>
+                                 <input type='text' class="form-control" name="date-departure" value placeholder="Date de départ"/>
+                              </div>
+                           </div>
+                           <div class="hg-form-component-input form-group col-md-6">
+                              <label>Retour</label>
+                              <div class='input-group'>
+                                 <input type='text' class="form-control" name="date-arrival" value placeholder="Date d'arrivée" />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="flex-col">
+                           <div class="hg-form-component-input form-group">
+                              <label for="reservation-enddate">De</label>
+                              <div class='input-group'>
+                                 <input type='text' class="form-control" name="city-departure" placeholder="Airport" />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="flex-col">
+                           <div class="hg-form-component-input form-group">
+                              <label for="reservation-enddate">À</label>
+                              <div class='input-group'>
+                                 <input type='text' class="form-control" name="city-arrival" placeholder="Airport" />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="flex-col">
+                           <div class="hg-form-component-input">
+                              <label for="reservation-people">Passagers</label>
+                              <select id="reservation-people" name="passengers">
+                                 <option value="1">1</option>
+                                 <option value="2">2</option>
+                                 <option value="3">3</option>
+                                 <option value="4">4</option>
+                              </select>
+                           </div>
+                        </div>
+                        <!--Coloana submit -->
+                        <div class="flex-col flex-col-end">
+                           <div class="hg-form-component">
+                              <button class="hb_btn btn-gradient" type="submit"> 
+                                 Rechercher
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end search container -->
+   </div>
+   <!-- start wellcome section -->
+   <div class="hg-wcome-container container">
+   <div class="hg-wcome-content">
+      <h3>Bienvenue</h3>
+      <h4>
+         Avec Air France, réservez un vol vers la destination de vos rêves et partez pour un séjour à la découverte de nouveaux horizons.
+      </h4>
+   </div>
+   </div>
+   <!-- start separator -->
+   <div class="clearfix hg-separator">
+   <span class="hg-separator__line hg-separator__line--left"></span>
+   <span class="hg-separator__icon"></span>
+   <span class="hg-separator__line hg-separator__line--right"></span>
+   </div>
+   <!-- end separator -->
+   <!-- start icon box section -->
+   <div class="row hg-content-iconbox">
+   <div class="col-md-3 col-sm-3">
+      <div class="hg-iconbox">
+         <div class="hg-iconbox__icon-wrapper">
+            <span class="hg-iconbox__icon icon-travel-56 " style="font-size: 40px;"></span>
+         </div>
+         <div class="hg-iconbox__content-wrapper">
+            <div class="hg-iconbox__wrapper hg-iconbox__title-wrapper">
+               <h3>
+                  <a href="index.html#">MAYFAIR HOTEL & SPA</a>
+               </h3>
+            </div>
+            <div class="hg-iconbox__wrapper hg-iconbox__desc-wrapper">
+               <p class="hg-iconbox__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end column -->
+   <div class="col-md-3 col-sm-3">
+      <div class="hg-iconbox">
+         <div class="hg-iconbox__icon-wrapper bed_wrapper">
+            <span class="hg-iconbox__icon icon-travel-55 bed" style="font-size:72px;"></span>
+         </div>
+         <div class="hg-iconbox__content-wrapper">
+            <div class="hg-iconbox__wrapper hg-iconbox__title-wrapper">
+               <h3>
+                  <a href="index.html#">ROOMS</a>
+               </h3>
+            </div>
+            <div class="hg-iconbox__wrapper hg-iconbox__desc-wrapper">
+               <p class="hg-iconbox__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end column -->
+   <div class="col-md-3 col-sm-3">
+      <div class="hg-iconbox">
+         <div class="hg-iconbox__icon-wrapper">
+            <span class="hg-iconbox__icon icon-travel-57" style="font-size: 40px;"></span>
+         </div>
+         <div class="hg-iconbox__content-wrapper">
+            <div class="hg-iconbox__wrapper hg-iconbox__title-wrapper">
+               <h3>
+                  <a href="index.html#">AMENITIES</a>
+               </h3>
+            </div>
+            <div class="hg-iconbox__wrapper hg-iconbox__desc-wrapper">
+               <p class="hg-iconbox__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end column -->
+   <div class="col-md-3 col-sm-3">
+      <div class="hg-iconbox">
+         <div class="hg-iconbox__icon-wrapper boat_wrapper">
+            <span class="hg-iconbox__icon icon-travel-46 boat" style="font-size: 62px;"></span>
+         </div>
+         <div class="hg-iconbox__content-wrapper">
+            <div class="hg-iconbox__wrapper hg-iconbox__title-wrapper">
+               <h3>
+                  <a href="index.html#">ACTIVITIES</a>
+               </h3>
+            </div>
+            <div class="hg-iconbox__wrapper hg-iconbox__desc-wrapper">
+               <p class="hg-iconbox__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end column -->
+   </div>
+   <!-- end icon box section -->
+   <!-- start separator -->
+   <div class="clearfix hg-separator--icon-no"></div>
+   <!-- end separator -->
+   <!-- start gallery section -->
+   <section class="hg-gallery">
+   <div class="hg-gallery-container container">
+      <div class="hg-gallery-content">
+         <h3>GALLERY</h3>
+         <h4>These are real photos from our customers.
+         </h4>
+      </div>
+   </div>
+   <!-- start gallery -->
+   <div class="hg-gallery--row container">
+      <div class="col-md-12 col-sm-12 hg-gallery__photo-column">
+         <div class="hg-gridGallery">
+            <div class="hg-gridGallery-slider">
+               <!--first gallery-->
+               <div class="hg-gridGallery-jstrigger gridGallery--cols3">
+                  <!--big picture-->
+                  <div class="gridGallery__item-w2">
+                     <div class="hg-gridGallery__wrapper">
+                        <a href="/images/glr1.jpg" class="hg-gridGallery--image_link sh__zoom--on">
+                           <div class="hg-gridGallery__img-container">
+                              <img src="/images/glr1.jpg" alt="glr1" width="780" />
+                           </div>
+                           <i class="hg-icon glyphicon glyphicon-search hg-icon__circled-icon"></i>
+                        </a>
+                     </div>
+                  </div>
+                  <!--small picture-->
+                  <div class="hg-gridGallery--item">
+                     <div class="hg-gridGallery__wrapper">
+                        <a href="images/glr2.jpg" class="hg-gridGallery--image_link sh__zoom--on">
+                           <div class="hg-gridGallery__img-container">
+                              <img src="/images/glr2.jpg" alt="glr1" width="740">
+                           </div>
+                           <i class="hg-icon glyphicon glyphicon-search hg-icon__circled-icon"></i>
+                        </a>
+                     </div>
+                  </div>
+                  <!--small picture-->
+                  <div class="hg-gridGallery--item">
+                     <div class="hg-gridGallery__wrapper">
+                        <a href="images/glr3.jpg" class="hg-gridGallery--image_link sh__zoom--on">
+                           <div class="hg-gridGallery__img-container">
+                              <img src="/images/glr3.jpg" alt="glr1" width="740">
+                           </div>
+                           <i class="hg-icon glyphicon glyphicon-search hg-icon__circled-icon"></i>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <!--end first gallery-->
+            </div>
+            <!--end slick slider-->
+         </div>
+      </div>
+      <div class="col-md-12 col-sm-12 hg-gallery__content-column">
+         <div class="hg-gallery--row-title row">
+            <div class="col md-8 col-sm-8">
+               <div class="clearfix hg-title-block">
+                  <h3 class="hg-title-block__title">Mayfair Hotel & Spa in Coconut Grove</h3>
+                  <h4 class="hg-title-block__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</h4>
+               </div>
+            </div>
+            <div class="col md-4 col-sm-4">
+               <div class="hg-gallery--text-inner-content">
+                  <button class="hg-gallery-but btn-fullwhite">View all</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end row gallery -->
+   </section>
+   <!-- end services section -->
+   </div>
+{% endblock %}

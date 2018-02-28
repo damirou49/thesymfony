@@ -1,0 +1,18 @@
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: App\Entity\User
+    from_email:
+      address: '%email.noreply%'
+      sender_name: "%name%"
+    resetting:
+        email:
+            from_email:
+               address: '%email.noreply%'
+               sender_name: "%name%"
+    registration:
+        form:
+            type: App\Form\RegistrationType
+
+  
+

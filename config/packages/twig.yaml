@@ -1,0 +1,11 @@
+twig:
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+
+    form_themes: ['bootstrap_4_layout.html.twig']
+    paths:
+        # default
+        templates: ~
+        # Make sure to know the actual Twig namespace of the bundle.
+        # e.g. AcmeDemoBundle -> AcmeDemo:
+        templates/bundles/FOSUserBundle: FOSUserBundle
